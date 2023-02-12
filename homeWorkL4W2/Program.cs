@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Reflection.Metadata;
 
 namespace homeWorkL4W2
 {
@@ -8,8 +8,12 @@ namespace homeWorkL4W2
     {
         public const string FILE_NAME = @"C:\Szkolenie\homrWorkL4W2.xlsx";
 
-        static void Main(string[] args)
+        
+
+        public static void Main(string[] args)
         {
+            int age;
+            ulong persnum, num;
             Console.WriteLine("Podaj imię pracownika");
 
             string name = Console.ReadLine();
@@ -24,18 +28,30 @@ namespace homeWorkL4W2
 
             Console.WriteLine("Podaj wiek pracownika");
 
-            object Int = null;
+            age = int.Parse(Console.ReadLine());
 
-            int age = Console.ReadLine();
-            Int.TryParse(Console.ReadLine(), out age);
             Console.WriteLine($"Wprowadzony wiek to: {age}");
+
+                 
 
             Console.WriteLine("Podaj płeć pracownika \"m\" mężczyzna, \"k\" kobieta ");
 
             string sex = Console.ReadLine();
 
             Console.WriteLine($"Wprowadzona płeć to: {sex}");
-        }
 
+            Console.WriteLine("Podaj PESEL");
+
+            persnum = ulong.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Podany pesel to: {persnum}");
+
+            Console.WriteLine("Podaj numer pracownika");
+
+            num = ulong.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Podany numer pracownika to: {num}");
+
+        } 
     }
 }
